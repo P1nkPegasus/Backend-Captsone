@@ -1,13 +1,32 @@
 package com.backend.charity.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "charity")
 public class Charity {
 
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private String address;
+
+    @Column
     private String city;
+
+    @Column
     private String state;
+
+    @Column
     private Long phoneNumber;
+
+    @Column
     private String website;
 
     public Charity() {

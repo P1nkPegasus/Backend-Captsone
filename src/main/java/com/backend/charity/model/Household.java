@@ -1,11 +1,26 @@
 package com.backend.charity.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "household")
 public class Household {
 
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private Long size;
+
+    @Column
     private Long adults;
+
+    @Column
     private Long children;
 
     public Household() {

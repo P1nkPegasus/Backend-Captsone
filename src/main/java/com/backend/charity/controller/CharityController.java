@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api")
@@ -36,7 +37,7 @@ public class CharityController {
     }
 
     @GetMapping("/charities/{charitiesId}/")
-    public Charity getCharity(@PathVariable (value = "charitiesId") Long charitiesId){
+    public Optional<Charity> getCharity(@PathVariable (value = "charitiesId") Long charitiesId){
         System.out.println("calling getCharity");
         return charityService.getCharity(charitiesId);
     }
@@ -49,7 +50,7 @@ public class CharityController {
     }
 
     @DeleteMapping("/charities/{charitiesId}/")
-    public String deleteCharity(@PathVariable (value = "charitiesId") Long charitiesId){
+    public Optional<Charity> deleteCharity(@PathVariable (value = "charitiesId") Long charitiesId){
         System.out.println("calling deleteCharity");
         return charityService.deleteCharity(charitiesId);
     }

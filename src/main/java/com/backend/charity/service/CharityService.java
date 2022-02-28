@@ -155,4 +155,21 @@ public class CharityService {
             throw new InformationNotFoundException("household with id " + householdId + " not found");
         }
     }
+
+    public Household deleteCharityHousehold(Long charityId, Long householdId){
+        System.out.println("service calling deleteCharityHousehold...");
+
+        Optional<Charity> charity = charityRepository.findById(charityId);
+        if(charity.isPresent()){
+            for(Household household : charity.get().getHouseholdList()){
+                if(household.getId() == householdId) {
+                    householdRepository.deleteById(householdId);
+                    return household;
+                }
+            }
+            throw new InformationNotFoundException("charity with id " + charityId + " not found");
+        } else{
+            throw new InformationNotFoundException("household with id " + householdId + " not found");
+        }
+    }
 }

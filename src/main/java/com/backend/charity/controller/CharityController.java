@@ -71,14 +71,14 @@ public class CharityController {
         return charityService.createCharityHousehold(charitiesId, householdObject);
     }
 
-    @GetMapping("/charities/{charitiesId}/households/{householdsId}")
+    @GetMapping("/charities/{charitiesId}/households/{householdId}")
     public Household getCharityHousehold(@PathVariable(value = "charitiesId") Long charitiesId,
                                          @PathVariable(value = "householdId") Long householdId) {
         System.out.println("calling getCharityHousehold...");
         return charityService.getCharityHousehold(charitiesId, householdId);
     }
 
-    @PutMapping("/charities/{charitiesId}/households/{householdsId}")
+    @PutMapping("/charities/{charitiesId}/households/{householdId}")
     public Household updateCharityHousehold(@PathVariable(value = "charitiesId") Long charitiesId,
                                             @PathVariable(value = "householdId") Long householdId,
                                             @RequestBody Household householdObject) {
@@ -86,7 +86,7 @@ public class CharityController {
         return charityService.updateCharityHousehold(charitiesId, householdId, householdObject);
     }
 
-    @DeleteMapping("/charities/{charitiesId}/households/{householdsId}")
+    @DeleteMapping("/charities/{charitiesId}/households/{householdId}")
     public void deleteCharityHousehold(@PathVariable(value = "charitiesId") Long charitiesId,
                                        @PathVariable(value = "householdId") Long householdId) {
         System.out.println("calling deleteCharityHousehold");

@@ -1,5 +1,7 @@
 package com.backend.charity.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,9 +25,23 @@ public class Household {
     @Column
     private Long children;
 
-    public Household() {
+    
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "charityId")
+
+    private Charity charity;
+
+    public Charity getCharity() {
+        return charity;
     }
 
+    public void setCharity(Charity charity) {
+        this.charity = charity;
+    }
+
+    public Household() {
+    }
     public Household(Long id, String name, Long size, Long adults, Long children) {
         this.id = id;
         this.name = name;
@@ -85,6 +101,4 @@ public class Household {
         this.children = children;
     }
 
-    public void setCharity(Charity charity) {
-    }
 }

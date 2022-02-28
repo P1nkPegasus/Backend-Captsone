@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface HouseholdRepository extends JpaRepository<Household, Long> {
-    List<Household> findAll(Long charityId);
+//    List<Household> findAll(Long charityId);
 
-    Household findByFirstName(String name);
+//    Household findByName(String name);
 
     Optional<Household> findByName(String name);
 }

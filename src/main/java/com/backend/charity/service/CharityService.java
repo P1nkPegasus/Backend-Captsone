@@ -50,6 +50,7 @@ public class CharityService {
 
     public Optional<Charity> getCharity(Long charityId) {
         System.out.println("service calling getCharity...");
+
         Optional<Charity> charity = charityRepository.findById(charityId);
         if (charity.isPresent()) {
             return charity;
@@ -64,7 +65,7 @@ public class CharityService {
         Optional<Charity> charity = charityRepository.findById(charityId);
         if (charity.isPresent()) {
             if (charityObject.getName().equals(charity.get().getName())) {
-                System.out.println("Same");
+                System.out.println("Same information");
                 throw new InformationExistException("charity " + charity.get().getName() + "  already exists");
             } else {
                 Charity updateCharity = charityRepository.findById(charityId).get();

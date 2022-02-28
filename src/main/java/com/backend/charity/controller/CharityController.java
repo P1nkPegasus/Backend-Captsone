@@ -1,6 +1,7 @@
 package com.backend.charity.controller;
 
 import com.backend.charity.model.Charity;
+import com.backend.charity.model.Household;
 import com.backend.charity.service.CharityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -53,5 +54,42 @@ public class CharityController {
     public Optional<Charity> deleteCharity(@PathVariable (value = "charitiesId") Long charitiesId){
         System.out.println("calling deleteCharity");
         return charityService.deleteCharity(charitiesId);
+    }
+
+    //HOUSEHOLD
+
+    @GetMapping("/charities/{charitiesId}/households/")
+    public List<Household> getAllCharityHousehold(@PathVariable(value = "charityId") Long charityId) {
+        System.out.println("calling getAllCharityHousehold...");
+        return charityService.getAllCharityHousehold(charityId);
+    }
+
+    @PostMapping("/charities/{charitiesId}/households/")
+    public Household createCharityHousehold(@PathVariable(value = "charityId") Long charityId,
+                                            @RequestBody Household householdObject) {
+        System.out.println("calling createCharityHousehold");
+        return charityService.createCharityHousehold(charityId, householdObject);
+    }
+
+    @GetMapping("/charities/{charitiesId}/households/{householdsId}/")
+    public Household getCharityHousehold(@PathVariable(value = "charityId") Long charityId,
+                                         @PathVariable(value = "householdId") Long householdId) {
+        System.out.println("calling getCharityHousehold...");
+        return charityService.getCharityHousehold(charityId, householdId);
+    }
+
+    @PutMapping("/charities/{charitiesId}/households/{householdsId}/")
+    public Household updateCharityHousehold(@PathVariable(value = "charityId") Long charityId,
+                                            @PathVariable(value = "householdId") Long householdId,
+                                            @RequestBody Household householdObject) {
+        System.out.println("calling updateCharityHousehold");
+        return charityService.updateCharityHousehold(charityId, householdId, householdObject);
+    }
+
+    @DeleteMapping("/charities/{charitiesId}/households/{householdsId}/")
+    public void deleteCharityHousehold(@PathVariable(value = "charityId") Long charityId,
+                                       @PathVariable(value = "householdId") Long householdId) {
+        System.out.println("calling deleteCharityHousehold");
+        charityService.deleteCharityHousehold(householdId, charityId);
     }
 }

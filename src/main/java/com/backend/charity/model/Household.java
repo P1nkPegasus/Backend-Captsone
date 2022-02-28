@@ -84,4 +84,7 @@ public class Household {
     public void setChildren(Long children) {
         this.children = children;
     }
+
+    public void setCharity(Charity charity) {
+    }
 }

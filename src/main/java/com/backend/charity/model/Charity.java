@@ -1,6 +1,7 @@
 package com.backend.charity.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "charity")
@@ -28,6 +29,9 @@ public class Charity {
 
     @Column
     private String website;
+
+    @OneToMany(mappedBy = "charity")
+    private List<Household> householdList;
 
     public Charity() {
     }
@@ -110,4 +114,13 @@ public class Charity {
     public void setWebsite(String website) {
         this.website = website;
     }
+
+
+    public List<Household> getHouseholdList() {
+        return householdList;
+    }
+    public void setHouseholdList(List<Household> householdList) {
+        this.householdList = householdList;
+    }
+
 }

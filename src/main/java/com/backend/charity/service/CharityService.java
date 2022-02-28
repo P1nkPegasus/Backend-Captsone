@@ -135,5 +135,24 @@ public class CharityService {
         }
     }
 
+    public Household updateCharityHousehold(Long charityId, Long householdId, Household householdObject){
+        System.out.println("service calling updateCharityHousehold...");
 
+        Optional<Charity> charity = charityRepository.findById(charityId);
+        if(charity.isPresent()){
+            for(Household household : charity.get().getHouseholdList()){
+                if(household.getId() == householdId) {
+                    household.setName(householdObject.getName());
+                    household.setSize(householdObject.getSize());
+                    household.setAdults(householdObject.getAdults());
+                    household.setChildren(householdObject.getChildren());
+
+                    return householdRepository.save(household);
+                }
+            }
+            throw new InformationNotFoundException("charity with id " + charityId + " not found");
+        } else{
+            throw new InformationNotFoundException("household with id " + householdId + " not found");
+        }
+    }
 }

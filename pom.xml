@@ -14,7 +14,8 @@
     <name>charity</name>
     <description>charity</description>
     <properties>
-        <java.version>17</java.version>
+<!--        <java.version>17</java.version>-->
+        <java.runtime.version>11</java.runtime.version>
     </properties>
     <dependencies>
         <dependency>

@@ -49,9 +49,9 @@ The first step I took in creating this application was searching through a varie
 | DELETE       | _/api/charities/charitiesId/households/householdId_ |
 
 ## Challenges 
--org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'charityId' for method parameter type Long is not present
-<br>-deploying the app through Heroku
-<br>-connecting the frontend to the backend, kept running into a CORS issue
+- I kept running into this error ```org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'charityId' for method parameter type Long is not present```
+<br>-deploying the app through Heroku meant that I had to refactor my project from Java SDK 17 to Java SDK 11
+<br>-connecting the frontend to the backend was troublesome. I kept running into a CORS issue so I added the WebMvcConfigurer class
 
 ## JSon 
 
@@ -125,5 +125,5 @@ The first step I took in creating this application was searching through a varie
 
 ## Resources 
 https://www.census.gov/newsroom/stories/poverty-awareness-month.html
-https://www.census.gov/newsroom/stories/homeless-persons-memorial-day.html
-https://www.vecteezy.com/free-vector/charity
+<br> https://www.census.gov/newsroom/stories/homeless-persons-memorial-day.html
+<br>https://www.vecteezy.com/free-vector/charity

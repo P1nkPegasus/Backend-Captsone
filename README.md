@@ -53,7 +53,28 @@ The first step I took in creating this application was searching through a varie
 <br>-deploying the app through Heroku
 <br>-connecting the frontend to the backend, kept running into a CORS issue
 
+## JSon 
 
+`[
+{
+"id": 2,
+"name": "Salvation Armyyyyy",
+"address": " 3333 New address ave",
+"city": "Denver",
+"state": "Colorado",
+"phoneNumber": 2222222222,
+"website": "GetYourSalvation.com",
+"householdList": [
+{
+"id": 1,
+"name": "Applecan",
+"size": 4,
+"adults": 2,
+"children": 2
+}
+]
+}
+]`
 ## Dependencies 
 
   ```  <dependencies>

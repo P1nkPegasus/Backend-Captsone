@@ -10,11 +10,12 @@ In the United States alone there were approximately 37.2 million people in pover
 <br> 
 <br>This application allows sponsors to see which charity needs have yet to be met. The models are the charities, the household receiving the donations, the individuals in each household, and their clothing needs. The expectation of this application is to make sure that households’ needs are adequately met.
 
-##Thought Process
+## Thought Process
 
 The first step I took in creating this application was searching through a variety of my passions for inspiration. From there, I searched for inefficiencies in different industries and figure out which problem I will be able to solve given a one-week time frame. My focus was specifically on how the back end would work. For example, what models I would have and what attributes would go with them so I used a white board to brainstorm and then created an entity relationship diagram (ERD). 
 
-
+## Entity Relationship Diagram (ERD)
+![Charity App ERD](https://user-images.githubusercontent.com/77082461/156379757-a46abc53-e461-4e4e-99e0-45e36da0e480.png)
 
 ## Endpoints
 | REQUEST TYPE | CHARITY URL                  |

@@ -48,6 +48,11 @@ The first step I took in creating this application was searching through a varie
 | PUT          | _/api/charities/charitiesId/households/householdId_ |
 | DELETE       | _/api/charities/charitiesId/households/householdId_ |
 
+## Challenges 
+-org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'charityId' for method parameter type Long is not present
+<br>-deploying the app through Heroku
+<br>-connecting the frontend to the backend, kept running into a CORS issue
+
 
 ## Dependencies 
 

@@ -16,6 +16,23 @@ In the United States alone there were approximately 37.2 million people in pover
 
 The first step I took in creating this application was searching through a variety of my passions for inspiration. From there, I searched for inefficiencies in different industries and figure out which problem I will be able to solve given a one-week time frame. My focus was specifically on how the back end would work. For example, what models I would have and what attributes would go with them so I used a white board to brainstorm and then created an entity relationship diagram (ERD). 
 
+## Planning 
+This is the backend to the Charity app and I had to plan out how I could finish this app and the frontend within one week. 
+
+<br>1: Ideation, come up with a description of the idea, user story, ERD, wireframe. *
+<br>2: Create a Springboot project. Set up models, service, and repos *
+<br>3: Complete backend with full CRUD and exceptions*
+<br>4: Create an Angular project with different web pages flushed out. (functionality)*
+<br>5: Make sure app works and design *
+<br>6: review and fix any small errors *
+
+* add relevant information to the ReadMe
+
+Using this timeframe, I used the Pomodoro Method and during breaks, I would try to do screen-free activities.
+
+
+![github Link](https://github.com/P1nkPegasus/Backend-Captsone/projects/1#column-17929921)
+
 ## Entity Relationship Diagram (ERD)
 ![Charity App ERD](https://user-images.githubusercontent.com/77082461/156379757-a46abc53-e461-4e4e-99e0-45e36da0e480.png)
 

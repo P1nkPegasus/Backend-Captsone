@@ -77,7 +77,8 @@ The first step I took in creating this application was searching through a varie
 ]`
 ## Dependencies 
 
-  ```  <dependencies>
+  ````
+   <dependencies>
   <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter</artifactId>
@@ -108,4 +109,9 @@ The first step I took in creating this application was searching through a varie
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-    </dependencies>`
+    </dependencies>
+````
+## Resources 
+https://www.census.gov/newsroom/stories/poverty-awareness-month.html
+https://www.census.gov/newsroom/stories/homeless-persons-memorial-day.html
+https://www.vecteezy.com/free-vector/charity

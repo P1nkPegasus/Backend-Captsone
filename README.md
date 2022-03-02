@@ -17,6 +17,18 @@ The first step I took in creating this application was searching through a varie
 ## Entity Relationship Diagram (ERD)
 ![Charity App ERD](https://user-images.githubusercontent.com/77082461/156379757-a46abc53-e461-4e4e-99e0-45e36da0e480.png)
 
+## User Stories 
+
+| 1   | As a User I should be able to see all charities                                       |
+|-----|---------------------------------------------------------------------------------------|
+| 2   | As a User I should be able to create a new charity                                    |
+| 3   | As a User I should be able to see all households                                      |
+| 4   | As a User I should be able to see all individuals                                     |
+| 5   | As a User I should be able to see all clothing items                                  |
+| 6   | As a User I should be able to see all households in a given charity                   |
+| 7   | As a User I should be able to see all individuals in a household                      |
+| 8   | As a User I should be able to see all clothing items needed for a specific individual |
+
 ## Endpoints
 | REQUEST TYPE | CHARITY URL                  |
 |--------------|------------------------------|
